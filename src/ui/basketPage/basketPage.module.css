@@ -1,0 +1,19 @@
+.tableWrapper{
+    display: flex;
+    padding: 10px 50px;
+}
+.singleList {
+    margin: 0 50px;
+    padding: 0 50px;
+}
+.singleList th, td{
+    margin: 0 100px;
+    padding: 0 120px;
+}
+.singleList table{
+    width:100%;
+}
+.productImg{
+    height: 100px;
+    width: 100px;
+}
