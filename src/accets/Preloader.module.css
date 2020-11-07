@@ -1,7 +1,8 @@
 .preloaderContainer{
     width: 200px;
     height: 200px;
-    background-color: cadetblue;
+    margin: 100px auto;
+
 }
 .preloaderContainer img{
     background-color: cadetblue;

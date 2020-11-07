@@ -16,5 +16,21 @@
       "price": 10
     }
   ],
-  "basket": []
+  "basket": [
+    {
+      "productName": "apple",
+      "amount": 1,
+      "id": 1
+    },
+    {
+      "productName": "papaya",
+      "amount": 1,
+      "id": 2
+    },
+    {
+      "productName": "papaya",
+      "amount": 3,
+      "id": 3
+    }
+  ]
 }

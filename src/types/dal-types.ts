@@ -4,7 +4,8 @@ import {ADD_PRODUCT, GET_BASKET, GET_GOODS, LOADING_SUCCESS} from "../accets/con
 
 export type InitialStateType = {
     goods:GoodsType[],
-    basket:BasketType[]
+    basket:BasketType[],
+    loading?:boolean
 }
 export type getAllGoodsFromBasketSuccessType = {
     type: typeof GET_GOODS

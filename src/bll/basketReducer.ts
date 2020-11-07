@@ -14,7 +14,8 @@ import {ThunkDispatch} from "redux-thunk";
 
 const initialState: InitialStateType = {
     goods: [],
-    basket: []
+    basket: [],
+    loading:false
 }
 const basketReducer = (state: InitialStateType = initialState, action: ActionType) => {
     switch (action.type) {
@@ -32,7 +33,6 @@ const basketReducer = (state: InitialStateType = initialState, action: ActionTyp
                 ...state, basket: [...state.basket, action.product]
             }
         case LOADING_SUCCESS:
-            debugger
             return {
                 ...state, loading: action.loading
             }

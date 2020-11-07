@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux';
+import Preloader  from '../../accets/Preloader';
 import {addProduct, getAllGoods, loadingSuccess} from '../../bll/basketReducer';
 import {MainPage} from "./mainPage";
-import {Preloader} from "../../accets/Preloader";
 
 export const MainPageContainer = () => {
 

@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import BasketPage from "./basketPage";
 import {getDataFromBasket, loadingSuccess} from "../../bll/basketReducer";
-import {Preloader} from "../../accets/Preloader";
+import Preloader from "../../accets/Preloader"
 
 export const BasketPageContainer = () => {
     const dispatch = useDispatch()
