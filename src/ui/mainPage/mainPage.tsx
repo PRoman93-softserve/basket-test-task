@@ -3,28 +3,26 @@ import {NavLink} from "react-router-dom";
 import {BASKET_PAGE} from "../../accets/constants";
 import s from "./mainPage.module.css"
 import {GoodsType} from "../../types/ui-types";
+import {Input} from "../../accets/Input";
 
 type PropType = {
     addProduct: (name: string, amount: number) => void,
-    goods: GoodsType[]
-}
+    goods: GoodsType[],
+    }
 export const MainPage = (props: PropType) => {
 
     const [amount, setAmount] = useState(1)
 
+
     const addSingleProduct = (name: string) => {
-        console.log(name)
         props.addProduct(name, amount)
     }
 
-    const onProductMountChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-        setAmount(+e.currentTarget.value)
-    }
 
     const goodsFromData = props.goods.map((el: GoodsType) => <div key={el.id} className={s.goodsWrapper}>
         <div>{el.name}</div>
         <div>{el.price}</div>
-        <div><input type="number" value={amount} onChange={onProductMountChange}/></div>
+        <div><Input setAmount={setAmount}/></div>
         <div>
             <button onClick={() => addSingleProduct(el.name)}>add to card</button>
         </div>
