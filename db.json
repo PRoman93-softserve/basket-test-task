@@ -23,13 +23,13 @@
       "id": 1
     },
     {
-      "productName": "banana",
-      "amount": 3,
+      "productName": "papaya",
+      "amount": 2,
       "id": 2
     },
     {
       "productName": "papaya",
-      "amount": 3,
+      "amount": 1,
       "id": 3
     }
   ]

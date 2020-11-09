@@ -14,8 +14,8 @@ import {ThunkDispatch} from "redux-thunk";
 
 const initialState: InitialStateType = {
     goods: [],
-    basket: [],
-    loading:false
+    basket: [{id: 0, amount: 0, productName: 'papaya'}],
+    loading: false
 }
 const basketReducer = (state: InitialStateType = initialState, action: ActionType) => {
     switch (action.type) {

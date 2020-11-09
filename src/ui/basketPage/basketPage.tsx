@@ -11,14 +11,19 @@ type PropType = {
     basket: BasketType[]
 }
 const BasketPage = (props: PropType) => {
+
+    const isPapayaCount = props.basket
+        .filter(el=>el.productName === 'papaya')
+        .reduce((acc:any,el:any) => acc + Number(el.amount),0)
+
     const basketContent = props.basket.map((element: BasketType) =>
-        <tr>
+        <tr key={element.id}>
             <td>{element.productName}</td>
             <td>{element.amount}</td>
             <td>${element.productName === 'banana'
                 ? 10 * element.amount : element.productName === 'apple'
-                    ? 8 * element.amount : element.productName === 'papaya' && element.amount >= 3
-                        ? (element.amount * 10) - ((element.amount / 3) * 0.5 * 10) : element.amount * 10}
+                    ? 8 * element.amount : element.productName === 'papaya' && isPapayaCount >= 3
+                        ? Math.round((element.amount * 10) - ((element.amount / 3) * 0.5 * 10)) : element.amount * 10}
             </td>
             <td><img className={s.productImg} src={element.productName === 'apple'
                 ? apple : element.productName === 'banana'
@@ -38,7 +43,6 @@ const BasketPage = (props: PropType) => {
                 </tr>
                 {basketContent}
             </table>
-            {/*{basketContent}*/}
             <NavLink to={MAIN_PAGE}>
                 <button>go to main page</button>
             </NavLink>
