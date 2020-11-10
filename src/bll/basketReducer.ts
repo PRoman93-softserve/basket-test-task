@@ -71,10 +71,8 @@ export const getDataFromBasket = () => (dispatch: ThunkDispatchType) => {
 }
 export const addProduct = (productName: string, amount: number) => (dispatch: ThunkDispatchType) => {
     dispatch(loadingSuccess(true))
-    setTimeout(() => {
-        basketApi.addProduct(productName, amount).then(data => {
-            dispatch(addProductToBasketSuccess({productName, amount}))
-        })
-        dispatch(loadingSuccess(false))
-    }, 1000)
+    basketApi.addProduct(productName, amount).then(data => {
+        dispatch(addProductToBasketSuccess({productName, amount}))
+    })
+    dispatch(loadingSuccess(false))
 }
